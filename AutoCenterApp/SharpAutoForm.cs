@@ -26,8 +26,8 @@ namespace AutoCenterApp
         private void _formButtonsEventHandler(object sender, EventArgs e)
         {
             Button AutoFormButton = sender as Button;
-
-            switch(AutoFormButton.Tag.ToString())
+            
+            switch (AutoFormButton.Tag.ToString())
             {
 
                 case "calculate":
@@ -47,8 +47,29 @@ namespace AutoCenterApp
                     }
                     else
                     {
-
+                        this._displayError("Values entered are not valid. Please check and try again.", "Invalid Inputs");
                     }
+                    break;
+
+                case "clear":
+                    // clearing all values from text boxes
+                    this.BasePriceTextBox.Text = "";
+                    this.AdditionalOptionsTextBox.Text = "";
+                    this.SubTotalTextBox.Text = "";
+                    this.SalesTaxTextBox.Text = "";
+                    this.TotalTextBox.Text = "";
+                    this.TradeInAllowanceTextBox.Text = "0"; // setting it to default value of 0
+                    this.AmountDueTextBox.Text = "";
+
+                    // unchecking all the check boxes of additional items
+                    this.StereoSystemCheckBox.Checked = false;
+                    this.LeatherInteriorCheckBox.Checked = false;
+                    this.ComputerNavigationCheckBox.Checked = false;
+
+                    // setting Standard Option as default checked radio button for exterior finnish
+                    this.StandardOptionRadioButton.Checked = true;
+                    this.PearlizedOptionRadioButton.Checked = false;
+                    this.CustomizedDetailingOptionRadioButton.Checked = false;
                     break;
 
             }
@@ -60,11 +81,31 @@ namespace AutoCenterApp
 
         }
 
+        private void _radioButtonsEventHandler(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _checkBoxesEventHandler(object sender, EventArgs e)
+        {
+            
+        }
+
         private double _calculateSalesTax()
         {
             double subTotal;
             // return calculated sales tax if sub total amount valid, otherwise zero
             return (Double.TryParse(this.SubTotalTextBox.Text.ToString(), out subTotal) && subTotal != 0) ? (subTotal * 0.13) : 0;
+        }
+
+        /// <summary>
+        /// Method to handle displaying of the errors using MessageBox
+        /// </summary>
+        /// <param name="message">Despcriptive error message</param>
+        /// <param name="title">Title for the MessageBox displaying error</param>
+        private void _displayError(string message, string title)
+        {
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -257,7 +257,7 @@
             this.StandardOptionRadioButton.Tag = "radio";
             this.StandardOptionRadioButton.Text = "Standard";
             this.StandardOptionRadioButton.UseVisualStyleBackColor = true;
-            this.StandardOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.StandardOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);
             // 
             // PearlizedOptionRadioButton
             // 
@@ -269,7 +269,7 @@
             this.PearlizedOptionRadioButton.Tag = "radio";
             this.PearlizedOptionRadioButton.Text = "Pearlized";
             this.PearlizedOptionRadioButton.UseVisualStyleBackColor = true;
-            this.PearlizedOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.PearlizedOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);
             // 
             // CustomizedDetailingOptionRadioButton
             // 
@@ -281,7 +281,7 @@
             this.CustomizedDetailingOptionRadioButton.Tag = "radio";
             this.CustomizedDetailingOptionRadioButton.Text = "Customized Detailing";
             this.CustomizedDetailingOptionRadioButton.UseVisualStyleBackColor = true;
-            this.CustomizedDetailingOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.CustomizedDetailingOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);
             // 
             // ExteriorFinnishGroupBox
             // 
@@ -306,7 +306,7 @@
             this.StereoSystemCheckBox.Tag = "checkbox";
             this.StereoSystemCheckBox.Text = "Stereo System";
             this.StereoSystemCheckBox.UseVisualStyleBackColor = true;
-            this.StereoSystemCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.StereoSystemCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
             // 
             // LeatherInteriorCheckBox
             // 
@@ -318,7 +318,7 @@
             this.LeatherInteriorCheckBox.Tag = "checkbox";
             this.LeatherInteriorCheckBox.Text = "Leather Interior";
             this.LeatherInteriorCheckBox.UseVisualStyleBackColor = true;
-            this.LeatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.LeatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
             // 
             // ComputerNavigationCheckBox
             // 
@@ -330,7 +330,7 @@
             this.ComputerNavigationCheckBox.Tag = "checkbox";
             this.ComputerNavigationCheckBox.Text = "Computer Navigation";
             this.ComputerNavigationCheckBox.UseVisualStyleBackColor = true;
-            this.ComputerNavigationCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
+            this.ComputerNavigationCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
             // 
             // AdditionalItemsGroupBox
             // 
