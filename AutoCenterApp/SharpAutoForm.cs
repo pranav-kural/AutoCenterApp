@@ -127,7 +127,13 @@ namespace AutoCenterApp
 
                 case "exit":
                     // close the form
-                    this.Close();
+
+                    //  bonus: Show's a Dialog form first to confirm if the user wants to close the form
+                    DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Close();
+                    }
                     break;
 
             }
