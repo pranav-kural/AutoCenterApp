@@ -1,6 +1,6 @@
 ﻿namespace AutoCenterApp
 {
-    partial class Form1
+    partial class SharpAutoForm
     {
         /// <summary>
         /// Required designer variable.
