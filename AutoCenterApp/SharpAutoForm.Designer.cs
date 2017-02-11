@@ -255,7 +255,7 @@
             this.StandardOptionRadioButton.Size = new System.Drawing.Size(82, 23);
             this.StandardOptionRadioButton.TabIndex = 0;
             this.StandardOptionRadioButton.TabStop = true;
-            this.StandardOptionRadioButton.Tag = "radio";
+            this.StandardOptionRadioButton.Tag = "Standard";
             this.StandardOptionRadioButton.Text = "Standard";
             this.StandardOptionRadioButton.UseVisualStyleBackColor = true;
             this.StandardOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);
@@ -267,7 +267,7 @@
             this.PearlizedOptionRadioButton.Name = "PearlizedOptionRadioButton";
             this.PearlizedOptionRadioButton.Size = new System.Drawing.Size(80, 23);
             this.PearlizedOptionRadioButton.TabIndex = 1;
-            this.PearlizedOptionRadioButton.Tag = "radio";
+            this.PearlizedOptionRadioButton.Tag = "Pearlized";
             this.PearlizedOptionRadioButton.Text = "Pearlized";
             this.PearlizedOptionRadioButton.UseVisualStyleBackColor = true;
             this.PearlizedOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);
@@ -279,7 +279,7 @@
             this.CustomizedDetailingOptionRadioButton.Name = "CustomizedDetailingOptionRadioButton";
             this.CustomizedDetailingOptionRadioButton.Size = new System.Drawing.Size(157, 23);
             this.CustomizedDetailingOptionRadioButton.TabIndex = 2;
-            this.CustomizedDetailingOptionRadioButton.Tag = "radio";
+            this.CustomizedDetailingOptionRadioButton.Tag = "CustomizedDetailing";
             this.CustomizedDetailingOptionRadioButton.Text = "Customized Detailing";
             this.CustomizedDetailingOptionRadioButton.UseVisualStyleBackColor = true;
             this.CustomizedDetailingOptionRadioButton.CheckedChanged += new System.EventHandler(this._radioButtonsEventHandler);

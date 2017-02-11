@@ -142,6 +142,25 @@ namespace AutoCenterApp
         private void _radioButtonsEventHandler(object sender, EventArgs e)
         {
 
+            RadioButton AutoFormRadioButton = sender as RadioButton;
+
+            if (!this._onClear)
+            {
+
+                switch (AutoFormRadioButton.Tag.ToString())
+                {
+                    case "Pearlized":
+                        // if Perlized is selected the add the value to additional otions, else subtract it
+                        this.AdditionalOptionsTextBox.Text = ((PearlizedOptionRadioButton.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 345.72) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 345.72)).ToString();
+                        break;
+                    case "CustomizedDetailing":
+                        // if Cutomized Detailing is selected the add the value to additional otions, else subtract it
+                        this.AdditionalOptionsTextBox.Text = ((CustomizedDetailingOptionRadioButton.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 599.99) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 599.99)).ToString();
+                        break;
+                }
+
+            }
+
         }
 
         private void _checkBoxesEventHandler(object sender, EventArgs e)
