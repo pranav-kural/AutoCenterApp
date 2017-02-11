@@ -145,7 +145,17 @@ namespace AutoCenterApp
 
         }
 
-        private void _menu
+        private void _menuStripEventHandler(object sender, EventArgs e)
+        {
+            ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
+
+            switch (menuItem.Tag.ToString())
+            {
+                case "exit":
+                    this.ExitButton.PerformClick(); // uses the same exit button logic to exit the app
+                    break;
+            }
+        }
 
         /// <summary>
         /// Event handler for text boxes, and to validate the inputs
