@@ -174,39 +174,17 @@ namespace AutoCenterApp
                 {
                     case "StereoSystem":
 
-                        if (StereoSystemCheckBox.Checked)
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 425.76).ToString();
-                        }
-                        else
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 425.76).ToString();
-                        }
-
+                        this.AdditionalOptionsTextBox.Text = ((StereoSystemCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 425.76) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 425.76)).ToString();
                         break;
+
                     case "LeatherInterior":
 
-                        if (LeatherInteriorCheckBox.Checked)
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 987.41).ToString();
-                        }
-                        else
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 987.41).ToString();
-                        }
-
+                        this.AdditionalOptionsTextBox.Text = ((LeatherInteriorCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 987.41) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 987.41)).ToString();
                         break;
+
                     case "ComputerNavigation":
 
-                        if (ComputerNavigationCheckBox.Checked)
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 1741.23).ToString();
-                        }
-                        else
-                        {
-                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 1741.23).ToString();
-                        }
-
+                        this.AdditionalOptionsTextBox.Text = ((ComputerNavigationCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 1741.23) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 1741.23)).ToString();
                         break;
                 }
 
