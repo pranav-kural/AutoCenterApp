@@ -72,6 +72,10 @@ namespace AutoCenterApp
                     this.CustomizedDetailingOptionRadioButton.Checked = false;
                     break;
 
+                case "exit":
+                    this.Close();
+                    break;
+
             }
 
         }
