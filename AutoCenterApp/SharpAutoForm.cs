@@ -1,4 +1,29 @@
-﻿using System;
+﻿///<summary>
+/// Georgian College - Computer Programmer
+/// COMP 1004 - Rapid Application Development
+/// Instructor: Tom Tsiliopoulos
+/// 
+/// Assignment 2: Sharp Auto Center
+/// Description: Create a project that determines the total amount due for 
+/// the purchase of a vehicle based	on accessories and options selected and 
+/// a trade-in value (if any). The price of the car	will be	set by the user.
+/// 
+/// Author Name: Pranav Kural
+/// Student Number: 200333253
+/// 
+/// Last modified: February 11, 2017
+/// Trello Board: https://trello.com/b/vAgyZck7
+/// 
+/// Brief revision history:
+/// Initial commit to add default .gitIgnore and .gitAttribute files.
+/// .....
+/// Added functionality for radio buttons
+/// Optimised the check box event handler logic
+/// Added commenting and documentaion support
+/// </summary>
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +35,27 @@ using System.Windows.Forms;
 
 namespace AutoCenterApp
 {
+    /// <summary>
+    /// SharpAutoForm Class inheriting from Form class
+    /// </summary>
     public partial class SharpAutoForm : Form
     {
-
+        /// <summary>
+        /// True if clear button has been clicked. If this is 
+        /// not set, selecting and unselecting checkboxes and radio
+        /// buttons may add or diduct values from the additional 
+        /// options cost after it has been set to 0
+        /// </summary>
         private bool _onClear;
-        private string _exteriorFinnishChosen;
+
+        /// <summary>
+        /// True if all inputs are valid
+        /// </summary>
         private bool _inputsAreValid;
 
+        /// <summary>
+        /// SharpAutoForm constructor, initializes the form components and instance variables
+        /// </summary>
         public SharpAutoForm()
         {   
             InitializeComponent();
@@ -24,10 +63,17 @@ namespace AutoCenterApp
             this._onClear = false;
         }
 
+        /// <summary>
+        /// Event handler for the form buttons - Caluclate, Clear and Exit
+        /// </summary>
+        /// <param name="sender">Button object associated with the event</param>
+        /// <param name="e">Event arguments</param>
         private void _formButtonsEventHandler(object sender, EventArgs e)
         {
+            // cast object received into Button
             Button AutoFormButton = sender as Button;
             
+            // select which button has been clicked
             switch (AutoFormButton.Tag.ToString())
             {
 
@@ -55,8 +101,6 @@ namespace AutoCenterApp
                 case "clear":
 
                     // clear button is pressed
-                    /// if not set, selecting and unselecting checkboxes and radio 
-                    /// buttons may add or diduct values from the additional options cost
                     this._onClear = true;
 
                     // clearing all values from text boxes
@@ -82,6 +126,7 @@ namespace AutoCenterApp
                     break;
 
                 case "exit":
+                    // close the form
                     this.Close();
                     break;
 
@@ -89,10 +134,16 @@ namespace AutoCenterApp
 
         }
 
+        /// <summary>
+        /// Event handler for text boxes, and to validate the inputs
+        /// </summary>
+        /// <param name="sender">Text Box object associated with the event</param>
+        /// <param name="e">Event arguments</param>
         private void _textBoxesEventHandler(object sender, EventArgs e)
         {
             TextBox AutoFormTextBox = sender as TextBox;
 
+            // select which text box's text has been changed
             switch (AutoFormTextBox.Tag.ToString())
             {
                 case "BasePrice":
@@ -128,25 +179,36 @@ namespace AutoCenterApp
                     }
                     else
                     {
+                        // if the field is not empty
+                        if (!this.TradeInAllowanceTextBox.Text.Equals(""))
+                        {
+                            this._displayError("Please enter valid amount for the trade-in allowance", "Invalid Inputs");
+                            this.TradeInAllowanceTextBox.Text = (this.TradeInAllowanceTextBox.Text.Length != 0) ? this.TradeInAllowanceTextBox.Text.Remove(this.TradeInAllowanceTextBox.Text.Length - 1) : "0";
+                            // set the caret to the end of textbox
+                            TradeInAllowanceTextBox.SelectionStart = TradeInAllowanceTextBox.Text.Length;
+                        }
+
                         this._inputsAreValid = false;
-                        this._displayError("Please enter valid amount for the trade-in allowance", "Invalid Inputs");
-                        this.TradeInAllowanceTextBox.Text = (this.TradeInAllowanceTextBox.Text.Length != 0) ? this.TradeInAllowanceTextBox.Text.Remove(this.TradeInAllowanceTextBox.Text.Length - 1) : "0";
-                        // set the caret to the end of textbox
-                        TradeInAllowanceTextBox.SelectionStart = TradeInAllowanceTextBox.Text.Length;
                     }
                     break;
             }
             
         }
 
+        /// <summary>
+        /// Event handler for Radio Button
+        /// </summary>
+        /// <param name="sender">Radio Button object associated with the event</param>
+        /// <param name="e">Event arguments</param>
         private void _radioButtonsEventHandler(object sender, EventArgs e)
         {
-
+            // casting the sender object to Radio Button to access the Tag property
             RadioButton AutoFormRadioButton = sender as RadioButton;
-
+            
+            // if this method has been called because of the Clear button click then don't run the logic below
             if (!this._onClear)
             {
-
+                // selecting the radio button pressed
                 switch (AutoFormRadioButton.Tag.ToString())
                 {
                     case "Pearlized":
@@ -163,27 +225,31 @@ namespace AutoCenterApp
 
         }
 
+        /// <summary>
+        /// Event handler for Check Boxes
+        /// </summary>
+        /// <param name="sender">Check Box object associated with the event</param>
+        /// <param name="e">Event arguments</param>
         private void _checkBoxesEventHandler(object sender, EventArgs e)
         {
             CheckBox AutoFormCheckBox = sender as CheckBox;
 
+            // if this method has been called because of the Clear button click then don't run the logic below
             if (!this._onClear)
             {
-
+                // select the check box clicked on
                 switch (AutoFormCheckBox.Tag.ToString())
                 {
                     case "StereoSystem":
-
+                        // if check box checked than add the value to additional options cost, else subtract it
                         this.AdditionalOptionsTextBox.Text = ((StereoSystemCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 425.76) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 425.76)).ToString();
                         break;
 
                     case "LeatherInterior":
-
                         this.AdditionalOptionsTextBox.Text = ((LeatherInteriorCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 987.41) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 987.41)).ToString();
                         break;
 
                     case "ComputerNavigation":
-
                         this.AdditionalOptionsTextBox.Text = ((ComputerNavigationCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 1741.23) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 1741.23)).ToString();
                         break;
                 }
@@ -192,6 +258,10 @@ namespace AutoCenterApp
 
         }
 
+        /// <summary>
+        /// Function Procedure to calculate and return the sales tax @ 13%
+        /// </summary>
+        /// <returns>sales tax on sub total</returns>
         private double _calculateSalesTax()
         {
             double subTotal;
