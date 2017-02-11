@@ -54,6 +54,11 @@ namespace AutoCenterApp
         private bool _inputsAreValid;
 
         /// <summary>
+        /// reference to the parent splash form
+        /// </summary>
+        public Form parentSplashForm;
+
+        /// <summary>
         /// SharpAutoForm constructor, initializes the form components and instance variables
         /// </summary>
         public SharpAutoForm()
@@ -132,13 +137,15 @@ namespace AutoCenterApp
                     DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        this.Close();
+                        this.parentSplashForm.Close();
                     }
                     break;
 
             }
 
         }
+
+        private void _menu
 
         /// <summary>
         /// Event handler for text boxes, and to validate the inputs

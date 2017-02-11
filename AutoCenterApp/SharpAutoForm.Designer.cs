@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SharpAutoForm));
             this.BasePriceLabel = new System.Windows.Forms.Label();
             this.AdditionalOptionsLabel = new System.Windows.Forms.Label();
             this.SubTotalLabel = new System.Windows.Forms.Label();
@@ -348,8 +349,6 @@
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
@@ -357,7 +356,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
@@ -426,10 +425,6 @@
             // 
             // AutoFormMenuStrip
             // 
-            this.AutoFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
             this.AutoFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.AutoFormMenuStrip.Name = "AutoFormMenuStrip";
             this.AutoFormMenuStrip.Size = new System.Drawing.Size(481, 24);
@@ -468,6 +463,7 @@
             this.Controls.Add(this.BasePriceLabel);
             this.Controls.Add(this.AutoFormMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.AutoFormMenuStrip;
             this.Name = "SharpAutoForm";
             this.Text = "Sharp Auto Center Form";

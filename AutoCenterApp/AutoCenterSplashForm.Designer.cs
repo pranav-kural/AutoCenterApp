@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoCenterSplashForm));
             this.SharpAutoFormLabel = new System.Windows.Forms.Label();
             this.WelcomeMessageLabel = new System.Windows.Forms.Label();
-            this.SplashFormTimerControl = new System.Windows.Forms.Timer(this.components);
+            this.SplashFormTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // SharpAutoFormLabel
@@ -58,20 +59,25 @@
             this.WelcomeMessageLabel.TabIndex = 1;
             this.WelcomeMessageLabel.Text = "Welcome! Calculate the cost of purchasing your new car";
             // 
-            // SplashFormTimerControl
+            // SplashFormTimer
             // 
-            this.SplashFormTimerControl.Interval = 3000;
+            this.SplashFormTimer.Enabled = true;
+            this.SplashFormTimer.Interval = 3000;
+            this.SplashFormTimer.Tick += new System.EventHandler(this.SplashFormTimer_Tick);
             // 
             // AutoCenterSplashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::AutoCenterApp.Properties.Resources.cars;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 350);
+            this.ControlBox = false;
             this.Controls.Add(this.WelcomeMessageLabel);
             this.Controls.Add(this.SharpAutoFormLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimizeBox = false;
             this.Name = "AutoCenterSplashForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AutoCenterSplashForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,6 +88,6 @@
 
         private System.Windows.Forms.Label SharpAutoFormLabel;
         private System.Windows.Forms.Label WelcomeMessageLabel;
-        private System.Windows.Forms.Timer SplashFormTimerControl;
+        private System.Windows.Forms.Timer SplashFormTimer;
     }
 }

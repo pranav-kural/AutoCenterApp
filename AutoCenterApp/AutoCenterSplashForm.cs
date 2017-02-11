@@ -16,6 +16,17 @@ namespace AutoCenterApp
         {
             InitializeComponent();
         }
-        
+
+        private void SplashFormTimer_Tick(object sender, EventArgs e)
+        {
+            // instantiate SharpAutoForm
+            SharpAutoForm myAutoForm = new SharpAutoForm();
+            // passing the reference to the current form
+            myAutoForm.parentSplashForm = this;
+            // disable the timer
+            this.SplashFormTimer.Enabled = false;
+            myAutoForm.Show();
+            this.Hide(); // hide the splash form
+        }
     }
 }

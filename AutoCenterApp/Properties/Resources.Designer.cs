@@ -63,6 +63,16 @@ namespace AutoCenterApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carBackground {
+            get {
+                object obj = ResourceManager.GetObject("carBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cars {
             get {
                 object obj = ResourceManager.GetObject("cars", resourceCulture);
