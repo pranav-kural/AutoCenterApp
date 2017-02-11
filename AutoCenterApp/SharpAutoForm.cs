@@ -13,7 +13,7 @@ namespace AutoCenterApp
     public partial class SharpAutoForm : Form
     {
 
-        private List<String> _additionalItemsAdded;
+        private bool _onClear;
         private string _exteriorFinnishChosen;
         private bool _inputsAreValid;
 
@@ -21,6 +21,7 @@ namespace AutoCenterApp
         {   
             InitializeComponent();
             this._inputsAreValid = false; // initially set false cause no values entered yet
+            this._onClear = false;
         }
 
         private void _formButtonsEventHandler(object sender, EventArgs e)
@@ -52,6 +53,12 @@ namespace AutoCenterApp
                     break;
 
                 case "clear":
+
+                    // clear button is pressed
+                    /// if not set, selecting and unselecting checkboxes and radio 
+                    /// buttons may add or diduct values from the additional options cost
+                    this._onClear = true;
+
                     // clearing all values from text boxes
                     this.BasePriceTextBox.Text = "";
                     this.AdditionalOptionsTextBox.Text = "0";
@@ -70,6 +77,8 @@ namespace AutoCenterApp
                     this.StandardOptionRadioButton.Checked = true;
                     this.PearlizedOptionRadioButton.Checked = false;
                     this.CustomizedDetailingOptionRadioButton.Checked = false;
+                    
+                    this._onClear = false;
                     break;
 
                 case "exit":
@@ -137,7 +146,53 @@ namespace AutoCenterApp
 
         private void _checkBoxesEventHandler(object sender, EventArgs e)
         {
-            
+            CheckBox AutoFormCheckBox = sender as CheckBox;
+
+            if (!this._onClear)
+            {
+
+                switch (AutoFormCheckBox.Tag.ToString())
+                {
+                    case "StereoSystem":
+
+                        if (StereoSystemCheckBox.Checked)
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 425.76).ToString();
+                        }
+                        else
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 425.76).ToString();
+                        }
+
+                        break;
+                    case "LeatherInterior":
+
+                        if (LeatherInteriorCheckBox.Checked)
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 987.41).ToString();
+                        }
+                        else
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 987.41).ToString();
+                        }
+
+                        break;
+                    case "ComputerNavigation":
+
+                        if (ComputerNavigationCheckBox.Checked)
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) + 1741.23).ToString();
+                        }
+                        else
+                        {
+                            this.AdditionalOptionsTextBox.Text = (Double.Parse(this.AdditionalOptionsTextBox.Text) - 1741.23).ToString();
+                        }
+
+                        break;
+                }
+
+            }
+
         }
 
         private double _calculateSalesTax()

@@ -304,7 +304,7 @@
             this.StereoSystemCheckBox.Name = "StereoSystemCheckBox";
             this.StereoSystemCheckBox.Size = new System.Drawing.Size(115, 23);
             this.StereoSystemCheckBox.TabIndex = 0;
-            this.StereoSystemCheckBox.Tag = "checkbox";
+            this.StereoSystemCheckBox.Tag = "StereoSystem";
             this.StereoSystemCheckBox.Text = "Stereo System";
             this.StereoSystemCheckBox.UseVisualStyleBackColor = true;
             this.StereoSystemCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
@@ -316,7 +316,7 @@
             this.LeatherInteriorCheckBox.Name = "LeatherInteriorCheckBox";
             this.LeatherInteriorCheckBox.Size = new System.Drawing.Size(123, 23);
             this.LeatherInteriorCheckBox.TabIndex = 1;
-            this.LeatherInteriorCheckBox.Tag = "checkbox";
+            this.LeatherInteriorCheckBox.Tag = "LeatherInterior";
             this.LeatherInteriorCheckBox.Text = "Leather Interior";
             this.LeatherInteriorCheckBox.UseVisualStyleBackColor = true;
             this.LeatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
@@ -326,10 +326,10 @@
             this.ComputerNavigationCheckBox.AutoSize = true;
             this.ComputerNavigationCheckBox.Location = new System.Drawing.Point(7, 75);
             this.ComputerNavigationCheckBox.Name = "ComputerNavigationCheckBox";
-            this.ComputerNavigationCheckBox.Size = new System.Drawing.Size(160, 23);
+            this.ComputerNavigationCheckBox.Size = new System.Drawing.Size(156, 23);
             this.ComputerNavigationCheckBox.TabIndex = 2;
-            this.ComputerNavigationCheckBox.Tag = "checkbox";
-            this.ComputerNavigationCheckBox.Text = "Computer Navigation";
+            this.ComputerNavigationCheckBox.Tag = "ComputerNavigation";
+            this.ComputerNavigationCheckBox.Text = "ComputerNavigation";
             this.ComputerNavigationCheckBox.UseVisualStyleBackColor = true;
             this.ComputerNavigationCheckBox.CheckedChanged += new System.EventHandler(this._checkBoxesEventHandler);
             // 
@@ -357,7 +357,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
@@ -376,7 +376,7 @@
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
-            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.calculateToolStripMenuItem.Tag = "calculate";
             this.calculateToolStripMenuItem.Text = "Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
@@ -384,7 +384,7 @@
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.clearToolStripMenuItem.Tag = "clear";
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
@@ -392,12 +392,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(120, 6);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.fontToolStripMenuItem.Tag = "font";
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
@@ -405,7 +405,7 @@
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.colorToolStripMenuItem.Tag = "color";
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
@@ -421,7 +421,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // AutoFormMenuStrip
