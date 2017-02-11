@@ -28,295 +28,321 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BasePriceLabel = new System.Windows.Forms.Label();
+            this.AdditionalOptionsLabel = new System.Windows.Forms.Label();
+            this.SubTotalLabel = new System.Windows.Forms.Label();
+            this.SalesTaxLabel = new System.Windows.Forms.Label();
+            this.TotalLabel = new System.Windows.Forms.Label();
+            this.TradeInAllowanceLabel = new System.Windows.Forms.Label();
+            this.AmountDueLabel = new System.Windows.Forms.Label();
+            this.BasePriceTextBox = new System.Windows.Forms.TextBox();
+            this.AdditionalOptionsTextBox = new System.Windows.Forms.TextBox();
+            this.SubTotalTextBox = new System.Windows.Forms.TextBox();
+            this.SalesTaxTextBox = new System.Windows.Forms.TextBox();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
+            this.TradeInAllowanceTextBox = new System.Windows.Forms.TextBox();
+            this.AmountDueTextBox = new System.Windows.Forms.TextBox();
+            this.CalucateButton = new System.Windows.Forms.Button();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.StandardOptionRadioButton = new System.Windows.Forms.RadioButton();
+            this.PearlizedOptionRadioButton = new System.Windows.Forms.RadioButton();
+            this.CustomizedDetailingOptionRadioButton = new System.Windows.Forms.RadioButton();
+            this.ExteriorFinnishGroupBox = new System.Windows.Forms.GroupBox();
+            this.StereoSystemCheckBox = new System.Windows.Forms.CheckBox();
+            this.LeatherInteriorCheckBox = new System.Windows.Forms.CheckBox();
+            this.ComputerNavigationCheckBox = new System.Windows.Forms.CheckBox();
+            this.AdditionalItemsGroupBox = new System.Windows.Forms.GroupBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.AutoFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.ExteriorFinnishGroupBox.SuspendLayout();
+            this.AdditionalItemsGroupBox.SuspendLayout();
+            this.AutoFormMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // BasePriceLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label1.Location = new System.Drawing.Point(12, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Base Price:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.BasePriceLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.BasePriceLabel.Location = new System.Drawing.Point(12, 49);
+            this.BasePriceLabel.Name = "BasePriceLabel";
+            this.BasePriceLabel.Size = new System.Drawing.Size(131, 23);
+            this.BasePriceLabel.TabIndex = 0;
+            this.BasePriceLabel.Text = "Base Price:";
+            this.BasePriceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // AdditionalOptionsLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label2.Location = new System.Drawing.Point(12, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Additional Options:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AdditionalOptionsLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.AdditionalOptionsLabel.Location = new System.Drawing.Point(12, 81);
+            this.AdditionalOptionsLabel.Name = "AdditionalOptionsLabel";
+            this.AdditionalOptionsLabel.Size = new System.Drawing.Size(131, 23);
+            this.AdditionalOptionsLabel.TabIndex = 1;
+            this.AdditionalOptionsLabel.Text = "Additional Options:";
+            this.AdditionalOptionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // SubTotalLabel
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label3.Location = new System.Drawing.Point(12, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "SubTotal:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SubTotalLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.SubTotalLabel.Location = new System.Drawing.Point(12, 114);
+            this.SubTotalLabel.Name = "SubTotalLabel";
+            this.SubTotalLabel.Size = new System.Drawing.Size(131, 23);
+            this.SubTotalLabel.TabIndex = 2;
+            this.SubTotalLabel.Text = "SubTotal:";
+            this.SubTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // SalesTaxLabel
             // 
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label4.Location = new System.Drawing.Point(12, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 23);
-            this.label4.TabIndex = 3;
-            this.label4.Text = " Sales Tax(13%):\r\n";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SalesTaxLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.SalesTaxLabel.Location = new System.Drawing.Point(12, 149);
+            this.SalesTaxLabel.Name = "SalesTaxLabel";
+            this.SalesTaxLabel.Size = new System.Drawing.Size(131, 23);
+            this.SalesTaxLabel.TabIndex = 3;
+            this.SalesTaxLabel.Text = " Sales Tax(13%):\r\n";
+            this.SalesTaxLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // TotalLabel
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label5.Location = new System.Drawing.Point(12, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Total:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TotalLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.TotalLabel.Location = new System.Drawing.Point(12, 187);
+            this.TotalLabel.Name = "TotalLabel";
+            this.TotalLabel.Size = new System.Drawing.Size(131, 23);
+            this.TotalLabel.TabIndex = 4;
+            this.TotalLabel.Text = "Total:";
+            this.TotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // TradeInAllowanceLabel
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label6.Location = new System.Drawing.Point(12, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 23);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Trade-in Allowance:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TradeInAllowanceLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.TradeInAllowanceLabel.Location = new System.Drawing.Point(12, 221);
+            this.TradeInAllowanceLabel.Name = "TradeInAllowanceLabel";
+            this.TradeInAllowanceLabel.Size = new System.Drawing.Size(131, 23);
+            this.TradeInAllowanceLabel.TabIndex = 5;
+            this.TradeInAllowanceLabel.Text = "Trade-in Allowance:";
+            this.TradeInAllowanceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // AmountDueLabel
             // 
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.label7.Location = new System.Drawing.Point(12, 256);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 23);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Amount Due:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.AmountDueLabel.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.AmountDueLabel.Location = new System.Drawing.Point(12, 256);
+            this.AmountDueLabel.Name = "AmountDueLabel";
+            this.AmountDueLabel.Size = new System.Drawing.Size(131, 23);
+            this.AmountDueLabel.TabIndex = 6;
+            this.AmountDueLabel.Text = "Amount Due:";
+            this.AmountDueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // BasePriceTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox1.Location = new System.Drawing.Point(146, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(109, 23);
-            this.textBox1.TabIndex = 7;
+            this.BasePriceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.BasePriceTextBox.Location = new System.Drawing.Point(146, 48);
+            this.BasePriceTextBox.Name = "BasePriceTextBox";
+            this.BasePriceTextBox.Size = new System.Drawing.Size(109, 23);
+            this.BasePriceTextBox.TabIndex = 7;
+            this.BasePriceTextBox.Tag = "BasePrice";
+            this.BasePriceTextBox.TextChanged += new System.EventHandler(this._textBoxesEventHandler);
             // 
-            // textBox2
+            // AdditionalOptionsTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox2.Location = new System.Drawing.Point(146, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 23);
-            this.textBox2.TabIndex = 8;
+            this.AdditionalOptionsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.AdditionalOptionsTextBox.Location = new System.Drawing.Point(146, 81);
+            this.AdditionalOptionsTextBox.Name = "AdditionalOptionsTextBox";
+            this.AdditionalOptionsTextBox.ReadOnly = true;
+            this.AdditionalOptionsTextBox.Size = new System.Drawing.Size(109, 23);
+            this.AdditionalOptionsTextBox.TabIndex = 8;
             // 
-            // textBox3
+            // SubTotalTextBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox3.Location = new System.Drawing.Point(146, 114);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(109, 23);
-            this.textBox3.TabIndex = 9;
+            this.SubTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.SubTotalTextBox.Location = new System.Drawing.Point(146, 114);
+            this.SubTotalTextBox.Name = "SubTotalTextBox";
+            this.SubTotalTextBox.ReadOnly = true;
+            this.SubTotalTextBox.Size = new System.Drawing.Size(109, 23);
+            this.SubTotalTextBox.TabIndex = 9;
             // 
-            // textBox4
+            // SalesTaxTextBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox4.Location = new System.Drawing.Point(146, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(109, 23);
-            this.textBox4.TabIndex = 10;
+            this.SalesTaxTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.SalesTaxTextBox.Location = new System.Drawing.Point(146, 149);
+            this.SalesTaxTextBox.Name = "SalesTaxTextBox";
+            this.SalesTaxTextBox.ReadOnly = true;
+            this.SalesTaxTextBox.Size = new System.Drawing.Size(109, 23);
+            this.SalesTaxTextBox.TabIndex = 10;
             // 
-            // textBox5
+            // TotalTextBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox5.Location = new System.Drawing.Point(146, 187);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(109, 23);
-            this.textBox5.TabIndex = 11;
+            this.TotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.TotalTextBox.Location = new System.Drawing.Point(146, 187);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
+            this.TotalTextBox.Size = new System.Drawing.Size(109, 23);
+            this.TotalTextBox.TabIndex = 11;
             // 
-            // textBox6
+            // TradeInAllowanceTextBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10.75F);
-            this.textBox6.Location = new System.Drawing.Point(146, 221);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(109, 27);
-            this.textBox6.TabIndex = 12;
+            this.TradeInAllowanceTextBox.Font = new System.Drawing.Font("Segoe UI", 10.75F);
+            this.TradeInAllowanceTextBox.Location = new System.Drawing.Point(146, 221);
+            this.TradeInAllowanceTextBox.Name = "TradeInAllowanceTextBox";
+            this.TradeInAllowanceTextBox.Size = new System.Drawing.Size(109, 27);
+            this.TradeInAllowanceTextBox.TabIndex = 12;
+            this.TradeInAllowanceTextBox.Tag = "TradeInAllowance";
+            this.TradeInAllowanceTextBox.Text = "0";
+            this.TradeInAllowanceTextBox.TextChanged += new System.EventHandler(this._textBoxesEventHandler);
             // 
-            // textBox7
+            // AmountDueTextBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.textBox7.Location = new System.Drawing.Point(146, 256);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(109, 23);
-            this.textBox7.TabIndex = 13;
+            this.AmountDueTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.AmountDueTextBox.Location = new System.Drawing.Point(146, 256);
+            this.AmountDueTextBox.Name = "AmountDueTextBox";
+            this.AmountDueTextBox.ReadOnly = true;
+            this.AmountDueTextBox.Size = new System.Drawing.Size(109, 23);
+            this.AmountDueTextBox.TabIndex = 13;
             // 
-            // button1
+            // CalucateButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Lavender;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.button1.Location = new System.Drawing.Point(34, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 45);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Calculate";
-            this.button1.UseVisualStyleBackColor = false;
+            this.CalucateButton.BackColor = System.Drawing.Color.Lavender;
+            this.CalucateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.CalucateButton.Location = new System.Drawing.Point(34, 315);
+            this.CalucateButton.Name = "CalucateButton";
+            this.CalucateButton.Size = new System.Drawing.Size(93, 45);
+            this.CalucateButton.TabIndex = 16;
+            this.CalucateButton.Tag = "calculate";
+            this.CalucateButton.Text = "Calculate";
+            this.CalucateButton.UseVisualStyleBackColor = false;
+            this.CalucateButton.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // button2
+            // ClearButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Lavender;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.button2.Location = new System.Drawing.Point(202, 315);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 45);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.ClearButton.BackColor = System.Drawing.Color.Lavender;
+            this.ClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.ClearButton.Location = new System.Drawing.Point(202, 315);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(90, 45);
+            this.ClearButton.TabIndex = 17;
+            this.ClearButton.Tag = "clear";
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = false;
+            this.ClearButton.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // button3
+            // ExitButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Lavender;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
-            this.button3.Location = new System.Drawing.Point(358, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 45);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = false;
+            this.ExitButton.BackColor = System.Drawing.Color.Lavender;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F);
+            this.ExitButton.Location = new System.Drawing.Point(358, 315);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(92, 45);
+            this.ExitButton.TabIndex = 18;
+            this.ExitButton.Tag = "exit";
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // radioButton1
+            // StandardOptionRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 23);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Standard";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.StandardOptionRadioButton.AutoSize = true;
+            this.StandardOptionRadioButton.Checked = true;
+            this.StandardOptionRadioButton.Location = new System.Drawing.Point(7, 22);
+            this.StandardOptionRadioButton.Name = "StandardOptionRadioButton";
+            this.StandardOptionRadioButton.Size = new System.Drawing.Size(82, 23);
+            this.StandardOptionRadioButton.TabIndex = 0;
+            this.StandardOptionRadioButton.TabStop = true;
+            this.StandardOptionRadioButton.Tag = "radio";
+            this.StandardOptionRadioButton.Text = "Standard";
+            this.StandardOptionRadioButton.UseVisualStyleBackColor = true;
+            this.StandardOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // radioButton2
+            // PearlizedOptionRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 49);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 23);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "Pearlized";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.PearlizedOptionRadioButton.AutoSize = true;
+            this.PearlizedOptionRadioButton.Location = new System.Drawing.Point(7, 49);
+            this.PearlizedOptionRadioButton.Name = "PearlizedOptionRadioButton";
+            this.PearlizedOptionRadioButton.Size = new System.Drawing.Size(80, 23);
+            this.PearlizedOptionRadioButton.TabIndex = 1;
+            this.PearlizedOptionRadioButton.Tag = "radio";
+            this.PearlizedOptionRadioButton.Text = "Pearlized";
+            this.PearlizedOptionRadioButton.UseVisualStyleBackColor = true;
+            this.PearlizedOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // radioButton3
+            // CustomizedDetailingOptionRadioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 75);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(157, 23);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.Text = "Customized Detailing";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.CustomizedDetailingOptionRadioButton.AutoSize = true;
+            this.CustomizedDetailingOptionRadioButton.Location = new System.Drawing.Point(7, 75);
+            this.CustomizedDetailingOptionRadioButton.Name = "CustomizedDetailingOptionRadioButton";
+            this.CustomizedDetailingOptionRadioButton.Size = new System.Drawing.Size(157, 23);
+            this.CustomizedDetailingOptionRadioButton.TabIndex = 2;
+            this.CustomizedDetailingOptionRadioButton.Tag = "radio";
+            this.CustomizedDetailingOptionRadioButton.Text = "Customized Detailing";
+            this.CustomizedDetailingOptionRadioButton.UseVisualStyleBackColor = true;
+            this.CustomizedDetailingOptionRadioButton.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // groupBox2
+            // ExteriorFinnishGroupBox
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.groupBox2.Location = new System.Drawing.Point(285, 187);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(178, 106);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Exterior Finish";
+            this.ExteriorFinnishGroupBox.Controls.Add(this.CustomizedDetailingOptionRadioButton);
+            this.ExteriorFinnishGroupBox.Controls.Add(this.PearlizedOptionRadioButton);
+            this.ExteriorFinnishGroupBox.Controls.Add(this.StandardOptionRadioButton);
+            this.ExteriorFinnishGroupBox.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.ExteriorFinnishGroupBox.Location = new System.Drawing.Point(285, 187);
+            this.ExteriorFinnishGroupBox.Name = "ExteriorFinnishGroupBox";
+            this.ExteriorFinnishGroupBox.Size = new System.Drawing.Size(178, 106);
+            this.ExteriorFinnishGroupBox.TabIndex = 15;
+            this.ExteriorFinnishGroupBox.TabStop = false;
+            this.ExteriorFinnishGroupBox.Text = "Exterior Finish";
             // 
-            // checkBox1
+            // StereoSystemCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(7, 22);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(115, 23);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Stereo System";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.StereoSystemCheckBox.AutoSize = true;
+            this.StereoSystemCheckBox.Location = new System.Drawing.Point(7, 22);
+            this.StereoSystemCheckBox.Name = "StereoSystemCheckBox";
+            this.StereoSystemCheckBox.Size = new System.Drawing.Size(115, 23);
+            this.StereoSystemCheckBox.TabIndex = 0;
+            this.StereoSystemCheckBox.Tag = "checkbox";
+            this.StereoSystemCheckBox.Text = "Stereo System";
+            this.StereoSystemCheckBox.UseVisualStyleBackColor = true;
+            this.StereoSystemCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // checkBox2
+            // LeatherInteriorCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(7, 48);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(123, 23);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Leather Interior";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.LeatherInteriorCheckBox.AutoSize = true;
+            this.LeatherInteriorCheckBox.Location = new System.Drawing.Point(7, 48);
+            this.LeatherInteriorCheckBox.Name = "LeatherInteriorCheckBox";
+            this.LeatherInteriorCheckBox.Size = new System.Drawing.Size(123, 23);
+            this.LeatherInteriorCheckBox.TabIndex = 1;
+            this.LeatherInteriorCheckBox.Tag = "checkbox";
+            this.LeatherInteriorCheckBox.Text = "Leather Interior";
+            this.LeatherInteriorCheckBox.UseVisualStyleBackColor = true;
+            this.LeatherInteriorCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // checkBox3
+            // ComputerNavigationCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 75);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(160, 23);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Computer Navigation";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ComputerNavigationCheckBox.AutoSize = true;
+            this.ComputerNavigationCheckBox.Location = new System.Drawing.Point(7, 75);
+            this.ComputerNavigationCheckBox.Name = "ComputerNavigationCheckBox";
+            this.ComputerNavigationCheckBox.Size = new System.Drawing.Size(160, 23);
+            this.ComputerNavigationCheckBox.TabIndex = 2;
+            this.ComputerNavigationCheckBox.Tag = "checkbox";
+            this.ComputerNavigationCheckBox.Text = "Computer Navigation";
+            this.ComputerNavigationCheckBox.UseVisualStyleBackColor = true;
+            this.ComputerNavigationCheckBox.CheckedChanged += new System.EventHandler(this._formButtonsEventHandler);
             // 
-            // groupBox1
+            // AdditionalItemsGroupBox
             // 
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.groupBox1.Location = new System.Drawing.Point(285, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 109);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Additional Items";
+            this.AdditionalItemsGroupBox.Controls.Add(this.ComputerNavigationCheckBox);
+            this.AdditionalItemsGroupBox.Controls.Add(this.LeatherInteriorCheckBox);
+            this.AdditionalItemsGroupBox.Controls.Add(this.StereoSystemCheckBox);
+            this.AdditionalItemsGroupBox.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.AdditionalItemsGroupBox.Location = new System.Drawing.Point(285, 49);
+            this.AdditionalItemsGroupBox.Name = "AdditionalItemsGroupBox";
+            this.AdditionalItemsGroupBox.Size = new System.Drawing.Size(178, 109);
+            this.AdditionalItemsGroupBox.TabIndex = 14;
+            this.AdditionalItemsGroupBox.TabStop = false;
+            this.AdditionalItemsGroupBox.Text = "Additional Items";
             // 
             // fileToolStripMenuItem
             // 
@@ -331,6 +357,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
             // editToolStripMenuItem
             // 
@@ -348,25 +375,38 @@
             // 
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
             this.calculateToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.calculateToolStripMenuItem.Tag = "calculate";
             this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
             this.clearToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem.Tag = "clear";
             this.clearToolStripMenuItem.Text = "Clear";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem.Tag = "font";
             this.fontToolStripMenuItem.Text = "Font";
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem.Tag = "color";
             this.colorToolStripMenuItem.Text = "Color";
+            this.colorToolStripMenuItem.Click += new System.EventHandler(this._formButtonsEventHandler);
             // 
             // helpToolStripMenuItem
             // 
@@ -382,58 +422,53 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // menuStrip1
+            // AutoFormMenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AutoFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(481, 24);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
+            this.AutoFormMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.AutoFormMenuStrip.Name = "AutoFormMenuStrip";
+            this.AutoFormMenuStrip.Size = new System.Drawing.Size(481, 24);
+            this.AutoFormMenuStrip.TabIndex = 19;
+            this.AutoFormMenuStrip.Text = "AutoFormMenuStrip";
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
-            // 
-            // Form1
+            // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.ClientSize = new System.Drawing.Size(481, 372);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.ClearButton);
+            this.Controls.Add(this.CalucateButton);
+            this.Controls.Add(this.ExteriorFinnishGroupBox);
+            this.Controls.Add(this.AdditionalItemsGroupBox);
+            this.Controls.Add(this.AmountDueTextBox);
+            this.Controls.Add(this.TradeInAllowanceTextBox);
+            this.Controls.Add(this.TotalTextBox);
+            this.Controls.Add(this.SalesTaxTextBox);
+            this.Controls.Add(this.SubTotalTextBox);
+            this.Controls.Add(this.AdditionalOptionsTextBox);
+            this.Controls.Add(this.BasePriceTextBox);
+            this.Controls.Add(this.AmountDueLabel);
+            this.Controls.Add(this.TradeInAllowanceLabel);
+            this.Controls.Add(this.TotalLabel);
+            this.Controls.Add(this.SalesTaxLabel);
+            this.Controls.Add(this.SubTotalLabel);
+            this.Controls.Add(this.AdditionalOptionsLabel);
+            this.Controls.Add(this.BasePriceLabel);
+            this.Controls.Add(this.AutoFormMenuStrip);
+            this.MainMenuStrip = this.AutoFormMenuStrip;
+            this.Name = "SharpAutoForm";
             this.Text = "Form1";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.ExteriorFinnishGroupBox.ResumeLayout(false);
+            this.ExteriorFinnishGroupBox.PerformLayout();
+            this.AdditionalItemsGroupBox.ResumeLayout(false);
+            this.AdditionalItemsGroupBox.PerformLayout();
+            this.AutoFormMenuStrip.ResumeLayout(false);
+            this.AutoFormMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,31 +476,31 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label BasePriceLabel;
+        private System.Windows.Forms.Label AdditionalOptionsLabel;
+        private System.Windows.Forms.Label SubTotalLabel;
+        private System.Windows.Forms.Label SalesTaxLabel;
+        private System.Windows.Forms.Label TotalLabel;
+        private System.Windows.Forms.Label TradeInAllowanceLabel;
+        private System.Windows.Forms.Label AmountDueLabel;
+        private System.Windows.Forms.TextBox BasePriceTextBox;
+        private System.Windows.Forms.TextBox AdditionalOptionsTextBox;
+        private System.Windows.Forms.TextBox SubTotalTextBox;
+        private System.Windows.Forms.TextBox SalesTaxTextBox;
+        private System.Windows.Forms.TextBox TotalTextBox;
+        private System.Windows.Forms.TextBox TradeInAllowanceTextBox;
+        private System.Windows.Forms.TextBox AmountDueTextBox;
+        private System.Windows.Forms.Button CalucateButton;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.RadioButton StandardOptionRadioButton;
+        private System.Windows.Forms.RadioButton PearlizedOptionRadioButton;
+        private System.Windows.Forms.RadioButton CustomizedDetailingOptionRadioButton;
+        private System.Windows.Forms.GroupBox ExteriorFinnishGroupBox;
+        private System.Windows.Forms.CheckBox StereoSystemCheckBox;
+        private System.Windows.Forms.CheckBox LeatherInteriorCheckBox;
+        private System.Windows.Forms.CheckBox ComputerNavigationCheckBox;
+        private System.Windows.Forms.GroupBox AdditionalItemsGroupBox;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -475,7 +510,7 @@
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip AutoFormMenuStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
