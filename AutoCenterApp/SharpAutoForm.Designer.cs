@@ -64,6 +64,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AutoFormMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.AutoFormFontDialog = new System.Windows.Forms.FontDialog();
             this.ExteriorFinnishGroupBox.SuspendLayout();
             this.AdditionalItemsGroupBox.SuspendLayout();
             this.AutoFormMenuStrip.SuspendLayout();
@@ -434,6 +435,11 @@
             this.AutoFormMenuStrip.TabIndex = 19;
             this.AutoFormMenuStrip.Text = "AutoFormMenuStrip";
             // 
+            // AutoFormFontDialog
+            // 
+            this.AutoFormFontDialog.MaxSize = 11;
+            this.AutoFormFontDialog.MinSize = 7;
+            // 
             // SharpAutoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,9 +466,10 @@
             this.Controls.Add(this.AdditionalOptionsLabel);
             this.Controls.Add(this.BasePriceLabel);
             this.Controls.Add(this.AutoFormMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.AutoFormMenuStrip;
             this.Name = "SharpAutoForm";
-            this.Text = "Form1";
+            this.Text = "Sharp Auto Center Form";
             this.ExteriorFinnishGroupBox.ResumeLayout(false);
             this.ExteriorFinnishGroupBox.PerformLayout();
             this.AdditionalItemsGroupBox.ResumeLayout(false);
@@ -512,6 +519,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip AutoFormMenuStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.FontDialog AutoFormFontDialog;
     }
 }
 
