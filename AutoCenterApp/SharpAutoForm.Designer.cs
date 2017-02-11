@@ -158,6 +158,7 @@
             this.AdditionalOptionsTextBox.ReadOnly = true;
             this.AdditionalOptionsTextBox.Size = new System.Drawing.Size(109, 23);
             this.AdditionalOptionsTextBox.TabIndex = 8;
+            this.AdditionalOptionsTextBox.Text = "0";
             // 
             // SubTotalTextBox
             // 

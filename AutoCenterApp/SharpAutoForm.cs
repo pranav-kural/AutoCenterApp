@@ -54,7 +54,7 @@ namespace AutoCenterApp
                 case "clear":
                     // clearing all values from text boxes
                     this.BasePriceTextBox.Text = "";
-                    this.AdditionalOptionsTextBox.Text = "";
+                    this.AdditionalOptionsTextBox.Text = "0";
                     this.SubTotalTextBox.Text = "";
                     this.SalesTaxTextBox.Text = "";
                     this.TotalTextBox.Text = "";
@@ -82,7 +82,52 @@ namespace AutoCenterApp
 
         private void _textBoxesEventHandler(object sender, EventArgs e)
         {
+            TextBox AutoFormTextBox = sender as TextBox;
 
+            switch (AutoFormTextBox.Tag.ToString())
+            {
+                case "BasePrice":
+                    double basePrice = 0;
+                    // check if value of base price is parsable to a double
+                    if (Double.TryParse(this.BasePriceTextBox.Text, out basePrice))
+                    {
+                        this._inputsAreValid = true; // if value is valid
+                    }
+                    else
+                    {
+                        // if the field is not empty
+                        if (!this.BasePriceTextBox.Text.Equals(""))
+                        {
+                            this._displayError("Please enter valid amount for the base price", "Invalid Inputs");
+                            // remove the last entered invalid character
+                            this.BasePriceTextBox.Text = (this.BasePriceTextBox.Text.Length != 0) ? this.BasePriceTextBox.Text.Remove(this.BasePriceTextBox.Text.Length - 1) : "";
+                            // set the caret to the end of textbox
+                            BasePriceTextBox.SelectionStart = BasePriceTextBox.Text.Length;
+                        }
+
+                        this._inputsAreValid = false; // if value is invalid
+
+                    }
+                    break;
+
+                case "TradeInAllowance":
+                    double tradeInAllowance = 0;
+                    // check if value entered in Trad-In Allowance field is a valid number
+                    if (Double.TryParse(this.TradeInAllowanceTextBox.Text, out tradeInAllowance))
+                    {
+                        this._inputsAreValid = true; // input value is valid
+                    }
+                    else
+                    {
+                        this._inputsAreValid = false;
+                        this._displayError("Please enter valid amount for the trade-in allowance", "Invalid Inputs");
+                        this.TradeInAllowanceTextBox.Text = (this.TradeInAllowanceTextBox.Text.Length != 0) ? this.TradeInAllowanceTextBox.Text.Remove(this.TradeInAllowanceTextBox.Text.Length - 1) : "0";
+                        // set the caret to the end of textbox
+                        TradeInAllowanceTextBox.SelectionStart = TradeInAllowanceTextBox.Text.Length;
+                    }
+                    break;
+            }
+            
         }
 
         private void _radioButtonsEventHandler(object sender, EventArgs e)
