@@ -8,6 +8,8 @@
 /// the purchase of a vehicle based	on accessories and options selected and 
 /// a trade-in value (if any). The price of the car	will be	set by the user.
 /// 
+/// BONUS: Added a splash form
+/// 
 /// Author Name: Pranav Kural
 /// Student Number: 200333253
 /// 
@@ -95,7 +97,7 @@ namespace AutoCenterApp
                         this.TotalTextBox.Text = (Double.Parse(this.SubTotalTextBox.Text) + Double.Parse(this.SalesTaxTextBox.Text)).ToString();
 
                         // 4. calculate and display the amount due
-                        this.AmountDueTextBox.Text = (Double.Parse(this.TotalTextBox.Text) - Double.Parse(this.TradeInAllowanceTextBox.Text)).ToString();
+                        this.AmountDueTextBox.Text = (Double.Parse(this.TotalTextBox.Text) - Double.Parse(this.TradeInAllowanceTextBox.Text)).ToString("C", System.Globalization.CultureInfo.CurrentCulture);
                     }
                     else
                     {
@@ -133,11 +135,12 @@ namespace AutoCenterApp
                 case "exit":
                     // close the form
 
-                    //  bonus: Show's a Dialog form first to confirm if the user wants to close the form
+                    //  BONUS: Show's a Dialog form first to confirm if the user wants to close the form
                     DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
                         this.parentSplashForm.Close();
+                        Application.Exit(); // terminate the application from background
                     }
                     break;
 
@@ -145,10 +148,16 @@ namespace AutoCenterApp
 
         }
 
+        /// <summary>
+        /// Event handler for menu items
+        /// </summary>
+        /// <param name="sender">Menu item associated with the event</param>
+        /// <param name="e">Event arguments</param>
         private void _menuStripEventHandler(object sender, EventArgs e)
         {
             ToolStripMenuItem menuItem = sender as ToolStripMenuItem;
 
+            // select the menu item selected
             switch (menuItem.Tag.ToString())
             {
                 case "exit":
@@ -156,19 +165,29 @@ namespace AutoCenterApp
                     break;
 
                 case "calculate":
-                    this.CalucateButton.PerformClick();
+                    this.CalucateButton.PerformClick(); // runs the calculate button logic
                     break;
 
                 case "clear":
-                    this.ClearButton.PerformClick();
+                    this.ClearButton.PerformClick(); // runs the clear button logic
                     break;
 
                 case "font":
+                    // show font dialog
                     AutoFormFontDialog.ShowDialog();
+                    // setting the selected font to base price and amount due text boxes
+                    this.BasePriceTextBox.Font = AutoFormFontDialog.Font;
+                    this.AmountDueTextBox.Font = AutoFormFontDialog.Font;
                     break;
 
                 case "color":
-
+                    // show the color dialog
+                    AutoFormColorDialog.ShowDialog();
+                    // setting the selected color to base price and amount due text boxes
+                    this.BasePriceTextBox.ForeColor = AutoFormColorDialog.Color;
+                    // for read only text boxes, need to reset the back color to set the new fore color
+                    this.AmountDueTextBox.BackColor = this.AmountDueTextBox.BackColor;
+                    this.AmountDueTextBox.ForeColor = AutoFormColorDialog.Color;
                     break;
 
                 case "about":
@@ -176,9 +195,7 @@ namespace AutoCenterApp
 
                     // instantiating a new about form
                     AboutForm aboutForm = new AboutForm();
-
                     aboutForm.ShowDialog(); // show a model about form
-
                     break;
 
             }

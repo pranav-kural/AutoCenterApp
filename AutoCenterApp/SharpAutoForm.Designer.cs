@@ -76,6 +76,7 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AutoFormFontDialog = new System.Windows.Forms.FontDialog();
+            this.AutoFormColorDialog = new System.Windows.Forms.ColorDialog();
             this.ExteriorFinnishGroupBox.SuspendLayout();
             this.AdditionalItemsGroupBox.SuspendLayout();
             this.AutoFormMenuStrip.SuspendLayout();
@@ -214,7 +215,6 @@
             this.AmountDueTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.AmountDueTextBox.Location = new System.Drawing.Point(146, 256);
             this.AmountDueTextBox.Name = "AmountDueTextBox";
-            this.AmountDueTextBox.ReadOnly = true;
             this.AmountDueTextBox.Size = new System.Drawing.Size(109, 23);
             this.AmountDueTextBox.TabIndex = 13;
             // 
@@ -435,6 +435,7 @@
             // 
             // AutoFormMenuStrip
             // 
+            this.AutoFormMenuStrip.BackColor = System.Drawing.Color.LightBlue;
             this.AutoFormMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem1,
             this.editToolStripMenuItem1,
@@ -450,7 +451,6 @@
             this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            this.fileToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.fileToolStripMenuItem1.ShowShortcutKeys = false;
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "&File";
@@ -474,7 +474,6 @@
             this.fontToolStripMenuItem1,
             this.colorToolStripMenuItem1});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "&Edit";
             // 
@@ -506,8 +505,7 @@
             // fontToolStripMenuItem1
             // 
             this.fontToolStripMenuItem1.Name = "fontToolStripMenuItem1";
-            this.fontToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
+            this.fontToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem1.ShowShortcutKeys = false;
             this.fontToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.fontToolStripMenuItem1.Tag = "font";
@@ -529,7 +527,6 @@
             this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem1});
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem1.ShowShortcutKeys = false;
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem1.Text = "&Help";
@@ -640,6 +637,7 @@
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.ColorDialog AutoFormColorDialog;
     }
 }
 
