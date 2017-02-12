@@ -154,6 +154,33 @@ namespace AutoCenterApp
                 case "exit":
                     this.ExitButton.PerformClick(); // uses the same exit button logic to exit the app
                     break;
+
+                case "calculate":
+                    this.CalucateButton.PerformClick();
+                    break;
+
+                case "clear":
+                    this.ClearButton.PerformClick();
+                    break;
+
+                case "font":
+                    AutoFormFontDialog.ShowDialog();
+                    break;
+
+                case "color":
+
+                    break;
+
+                case "about":
+                    // BONUS: creating an About form instead of just a message box
+
+                    // instantiating a new about form
+                    AboutForm aboutForm = new AboutForm();
+
+                    aboutForm.ShowDialog(); // show a model about form
+
+                    break;
+
             }
         }
 

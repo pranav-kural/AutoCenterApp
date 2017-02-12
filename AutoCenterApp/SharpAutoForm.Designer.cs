@@ -483,21 +483,25 @@
             this.calculateToolStripMenuItem1.Name = "calculateToolStripMenuItem1";
             this.calculateToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.calculateToolStripMenuItem1.ShowShortcutKeys = false;
-            this.calculateToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.calculateToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.calculateToolStripMenuItem1.Tag = "calculate";
             this.calculateToolStripMenuItem1.Text = "&Calculate";
+            this.calculateToolStripMenuItem1.Click += new System.EventHandler(this._menuStripEventHandler);
             // 
             // clearToolStripMenuItem1
             // 
             this.clearToolStripMenuItem1.Name = "clearToolStripMenuItem1";
             this.clearToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
             this.clearToolStripMenuItem1.ShowShortcutKeys = false;
-            this.clearToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.clearToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.clearToolStripMenuItem1.Tag = "clear";
             this.clearToolStripMenuItem1.Text = "C&lear";
+            this.clearToolStripMenuItem1.Click += new System.EventHandler(this._menuStripEventHandler);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // fontToolStripMenuItem1
             // 
@@ -505,16 +509,20 @@
             this.fontToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem1.ShowShortcutKeys = false;
-            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.fontToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.fontToolStripMenuItem1.Tag = "font";
             this.fontToolStripMenuItem1.Text = "&Font";
+            this.fontToolStripMenuItem1.Click += new System.EventHandler(this._menuStripEventHandler);
             // 
             // colorToolStripMenuItem1
             // 
             this.colorToolStripMenuItem1.Name = "colorToolStripMenuItem1";
             this.colorToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.colorToolStripMenuItem1.ShowShortcutKeys = false;
-            this.colorToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.colorToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.colorToolStripMenuItem1.Tag = "color";
             this.colorToolStripMenuItem1.Text = "C&olor";
+            this.colorToolStripMenuItem1.Click += new System.EventHandler(this._menuStripEventHandler);
             // 
             // helpToolStripMenuItem1
             // 
@@ -531,8 +539,10 @@
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
             this.aboutToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem1.ShowShortcutKeys = false;
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Tag = "about";
             this.aboutToolStripMenuItem1.Text = "&About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this._menuStripEventHandler);
             // 
             // AutoFormFontDialog
             // 
