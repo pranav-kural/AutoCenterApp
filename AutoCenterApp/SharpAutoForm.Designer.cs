@@ -215,6 +215,7 @@
             this.AmountDueTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.AmountDueTextBox.Location = new System.Drawing.Point(146, 256);
             this.AmountDueTextBox.Name = "AmountDueTextBox";
+            this.AmountDueTextBox.ReadOnly = true;
             this.AmountDueTextBox.Size = new System.Drawing.Size(109, 23);
             this.AmountDueTextBox.TabIndex = 13;
             // 

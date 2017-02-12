@@ -114,9 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cars.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\carBackground.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -127,22 +124,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tumblr_nqvgnxKE0x1qajrndo1_500.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hd-car-wallpapers-vertical.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\top.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vertical-top-view-of-car-hi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\racing-car-149034_960_720.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\top1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

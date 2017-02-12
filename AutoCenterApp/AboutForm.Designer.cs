@@ -67,7 +67,7 @@
             // logoPictureBox
             // 
             this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = global::AutoCenterApp.Properties.Resources.racing_car_149034_960_720;
+            this.logoPictureBox.Image = global::AutoCenterApp.Properties.Resources.vertical_car;
             this.logoPictureBox.Location = new System.Drawing.Point(3, 3);
             this.logoPictureBox.Name = "logoPictureBox";
             this.tableLayoutPanel.SetRowSpan(this.logoPictureBox, 6);
