@@ -122,15 +122,8 @@ namespace AutoCenterApp
                     break;
 
                 case "exit":
-                    // close the form
-
-                    //  BONUS: Show's a Dialog form first to confirm if the user wants to close the form
-                    DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.parentSplashForm.Close();
-                        Application.Exit(); // terminate the application from background
-                    }
+                    // close the form (calls the form closing)
+                    this.Close();
                     break;
 
             }
@@ -150,7 +143,8 @@ namespace AutoCenterApp
             switch (menuItem.Tag.ToString())
             {
                 case "exit":
-                    this.ExitButton.PerformClick(); // uses the same exit button logic to exit the app
+                    // close the form (calls the form closing)
+                    this.Close();
                     break;
 
                 case "calculate":
@@ -323,6 +317,23 @@ namespace AutoCenterApp
         private void _displayError(string message, string title)
         {
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /// <summary>
+        ///  Form closing event
+        ///  Gets called when the form is closed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SharpAutoForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //  BONUS: Show's a Dialog form first to confirm if the user wants to close the form
+            DialogResult result = MessageBox.Show("Are you sure you want to close the application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.parentSplashForm.Close(); // close parent form
+                Application.Exit(); // terminate the application from background
+            }
         }
     }
 }
