@@ -13,7 +13,7 @@
 /// Author Name: Pranav Kural
 /// Student Number: 200333253
 /// 
-/// Last modified: February 11, 2017
+/// Last modified: February 12, 2017
 /// Trello Board: https://trello.com/b/vAgyZck7
 /// 
 /// Brief revision history:
@@ -43,14 +43,6 @@ namespace AutoCenterApp
     public partial class SharpAutoForm : Form
     {
         /// <summary>
-        /// True if clear button has been clicked. If this is 
-        /// not set, selecting and unselecting checkboxes and radio
-        /// buttons may add or diduct values from the additional 
-        /// options cost after it has been set to 0
-        /// </summary>
-        private bool _onClear;
-
-        /// <summary>
         /// True if all inputs are valid
         /// </summary>
         private bool _inputsAreValid;
@@ -67,7 +59,6 @@ namespace AutoCenterApp
         {   
             InitializeComponent();
             this._inputsAreValid = false; // initially set false cause no values entered yet
-            this._onClear = false;
         }
 
         /// <summary>
@@ -107,12 +98,8 @@ namespace AutoCenterApp
 
                 case "clear":
 
-                    // clear button is pressed
-                    this._onClear = true;
-
                     // clearing all values from text boxes
                     this.BasePriceTextBox.Text = "";
-                    this.AdditionalOptionsTextBox.Text = "0";
                     this.SubTotalTextBox.Text = "";
                     this.SalesTaxTextBox.Text = "";
                     this.TotalTextBox.Text = "";
@@ -128,8 +115,10 @@ namespace AutoCenterApp
                     this.StandardOptionRadioButton.Checked = true;
                     this.PearlizedOptionRadioButton.Checked = false;
                     this.CustomizedDetailingOptionRadioButton.Checked = false;
-                    
-                    this._onClear = false;
+
+                    // setting it after changing the checkboxes and radio buttons to avoid the change in value 
+                    // cause by the events triggered on changing their Checked property
+                    this.AdditionalOptionsTextBox.Text = "0";
                     break;
 
                 case "exit":
@@ -272,9 +261,6 @@ namespace AutoCenterApp
             // casting the sender object to Radio Button to access the Tag property
             RadioButton AutoFormRadioButton = sender as RadioButton;
             
-            // if this method has been called because of the Clear button click then don't run the logic below
-            if (!this._onClear)
-            {
                 // selecting the radio button pressed
                 switch (AutoFormRadioButton.Tag.ToString())
                 {
@@ -288,8 +274,6 @@ namespace AutoCenterApp
                         break;
                 }
 
-            }
-
         }
 
         /// <summary>
@@ -301,10 +285,7 @@ namespace AutoCenterApp
         {
             CheckBox AutoFormCheckBox = sender as CheckBox;
 
-            // if this method has been called because of the Clear button click then don't run the logic below
-            if (!this._onClear)
-            {
-                // select the check box clicked on
+            // select the check box clicked on
                 switch (AutoFormCheckBox.Tag.ToString())
                 {
                     case "StereoSystem":
@@ -320,8 +301,6 @@ namespace AutoCenterApp
                         this.AdditionalOptionsTextBox.Text = ((ComputerNavigationCheckBox.Checked) ? (Double.Parse(this.AdditionalOptionsTextBox.Text) + 1741.23) : (Double.Parse(this.AdditionalOptionsTextBox.Text) - 1741.23)).ToString();
                         break;
                 }
-
-            }
 
         }
 
